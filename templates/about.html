@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block aboutactive %}active{% endblock aboutactive %}
+
+
+{% block body %}
+
+<div class="d-flex justify-content-center align-items-center bg-image"
+    style="background-image: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); height: 40vh;">
+    <h1 class="text-light" style="font-family: 'Bree Serif', serif;"><u>About-Us</u></h1>
+</div>
+<div class="container">
+<br>
+    <div style="font-family: 'Merriweather', serif; font-size: 18px;">
+        <p>This is a simple text-analyzer. You can use it for some basic text analyzation,
+            Like: </p>
+        <ol>
+            <li><b>Removing Punctuations</b></li>
+            <p>Using this operation you can remove all the punctuations from the text.</p>
+            <li><b>Removing Numbers</b></li>
+            <p>Using this operation you can remove all the Numbers from the text.</p>
+            <li><b>Capitalize First</b></li>
+            <p>You can use this operation for Capitalizing the first character of the text.</p>
+            <li><b>UPPERCASE THE TEXT</b></li>
+            <P>This operation will convert your whole text to UPPERCASE.</P>
+            <li><b>lowercase the text</b></li>
+            <p>This operation will convert your whole text to lowercase.</p>
+            <li><b>Extra Spaces Remover</b></li>
+            <p>If you have extra spaces in the text, you can use this operation for clearing the extra spaces from the
+                text.
+            </p>
+            <li><b>Spaces Remover</b></li>
+            <p>This operation will remove all the spaces from the text.</p>
+            <li><b>Extra Lines Remover</b></li>
+            <p>This operation will be helpful when you want to remove the extra lines from the text.</p>
+            <li><b>Count Charaters</b></li>
+            <p>This operation will count all the characters present in the text.</p>
+        </ol>
+        <p><b>Note: You can use multiple operations at the same time.</b></p>
+    </div>
+
+</div>
+
+{% endblock body %}
+
+
+<!-- Remove Punctuations
+Capitalize First
+UPPERCASE THE TEXT
+Extra Spaces Remover
+Space Remover
+Lines Remover
+Count Characters  -->

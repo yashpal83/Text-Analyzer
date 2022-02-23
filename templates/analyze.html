@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Analyze{% endblock title %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="bg-info my-3 py-4" style="background-image: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);">
+        <h2 class="text-center text-light" style="font-family: 'Bree Serif', serif;"><u>Analyzed Text</u></h2>
+    </div>
+    <h4>{{result}}</h4>
+
+    <div class="my-3 border border-info p-3">
+        <pre>{{analyzed_text}}</pre>
+    </div>
+
+    {{message1}}
+    
+    <div style="height: 40vh;">
+        
+    </div>
+</div>
+
+{% endblock body %}

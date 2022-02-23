@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block homeactive %}active{% endblock homeactive %}
+
+
+
+
+{% block body %}
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Welcome to Text Analyzer!</strong>
+    <!-- I am practicing Django-Bootstrap-Site you can dismiss this warning. -->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="d-flex justify-content-center align-items-center bg-image"
+    style="background-image: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); height: 40vh;">
+    <h1 class="text-light" style="font-family: 'Bree Serif', serif;"><u>Text-Analyzer</u></h1>
+</div>
+<div class="container">
+    <form action="/analyze" method="post"> {% csrf_token %}
+        <div class="mb-3 my-5">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter your text below:</label>
+            <textarea class="form-control" name="text" id="text" rows="7"></textarea>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="removepunc" type="checkbox" role="switch" id="removepunc">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punctuations</label>
+        </div>
+   
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="removenum" type="checkbox" role="switch" id="removenum">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove Numbers</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="capitalizefirst" type="checkbox" role="switch" id="capitalizefirst">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Capitalize First</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="uppercase" type="checkbox" role="switch" id="uppercase">
+            <label class="form-check-label" for="flexSwitchCheckDefault">UPPERCASE THE TEXT</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="lowercase" type="checkbox" role="switch" id="lowercase">
+            <label class="form-check-label" for="flexSwitchCheckDefault">lowercase the text</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="extraspaceremover" type="checkbox" role="switch"
+                id="extraspaceremover">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Extra Spaces Remover</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="spaceremover" type="checkbox" role="switch" id="spaceremover">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Space Remover</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="lineremover" type="checkbox" role="switch" id="lineremover">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Extra Lines Remover</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" name="charcount" type="checkbox" role="switch" id="charcount">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Count Characters</label>
+        </div>
+
+        <br>
+        <p>Note: You can use multiple operations at the same time.</p>
+        <button type="submit" class="btn btn-success my-3">Analyze Text</button>
+    </form>
+</div>
+
+
+{% endblock body %}

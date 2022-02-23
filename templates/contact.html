@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Contact{% endblock title %}
+
+
+{% block contactactive %}active{% endblock contactactive %}
+
+
+{% block body %}
+
+
+
+<div class="d-flex justify-content-center align-items-center bg-image"
+    style="background-image: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); height: 40vh;">
+    <h1 class="text-light" style="font-family: 'Bree Serif', serif;"><u>Contact-Us</u></h1>
+</div>
+
+<div class="container my-5">
+    <form class="row g-3" action="/contact" method="post"> {% csrf_token %}
+        <div class="col-md-6">
+          <label for="inputName" class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name." required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" name="city" id="city" placeholder="Enter your city" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">State</label>
+          <input type="text" class="form-control" name="state" id="state" placeholder="Enter your state" required>
+        
+        </div>
+        <div class="mb-3">
+            <label for="inputDesc" class="form-label">Tell us About yourself.</label>
+            <textarea class="form-control" name="desc" id="desc" rows="5" required></textarea>
+          </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+</div>
+
+
+
+
+{% endblock body %}
+
